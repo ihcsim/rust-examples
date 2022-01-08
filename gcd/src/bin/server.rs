@@ -1,7 +1,7 @@
 use actix_web::{web, App, HttpResponse, HttpServer};
 use serde::Deserialize;
 
-use rust_gcd as gcd;
+use gcd;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -9,7 +9,7 @@ async fn main() -> std::io::Result<()> {
     let server = HttpServer::new(|| {
         App::new()
             .route("/", web::get().to(index))
-            .route("/gcd", web::post().to(gcd))
+            .route("/gcd", web::post().to(compute_gcd))
     });
     server
         .bind("127.0.0.1:3000")
@@ -30,7 +30,7 @@ fn index() -> HttpResponse {
     )
 }
 
-fn gcd(form: web::Form<Params>) -> HttpResponse {
+fn compute_gcd(form: web::Form<Params>) -> HttpResponse {
     if form.n == 0 || form.m == 0 {
         return HttpResponse::BadRequest()
             .content_type("text/html")

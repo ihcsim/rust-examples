@@ -1,7 +1,7 @@
 use std::env;
 use std::str::FromStr;
 
-use rust_gcd as gcd;
+use gcd;
 
 fn main() {
     let numbers = &mut Vec::new();

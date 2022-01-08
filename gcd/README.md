@@ -1,4 +1,4 @@
-# rust-gcd
+# gcd
 
 This is a Rust program to compute the
 [greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor)

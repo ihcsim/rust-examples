@@ -650,6 +650,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "gcd"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "serde",
+]
+
+[[package]]
 name = "generic-array"
 version = "0.14.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1169,14 +1177,6 @@ checksum = "52e44394d2086d010551b14b53b1f24e31647570cd1deb0379e2c21b329aba00"
 dependencies = [
  "hostname",
  "quick-error",
-]
-
-[[package]]
-name = "rust-gcd"
-version = "0.1.0"
-dependencies = [
- "actix-web",
- "serde",
 ]
 
 [[package]]

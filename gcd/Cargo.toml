@@ -1,5 +1,5 @@
 [package]
-name = "rust-gcd"
+name = "gcd"
 version = "0.1.0"
 edition = "2021"
 
